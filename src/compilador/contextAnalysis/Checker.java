@@ -29,15 +29,10 @@ import java.util.logging.Logger;
 public class Checker implements Visitor {
 
     IdentificationTable table;
+    public int erroC = 0;
 
-    Checker() {
-        table = new IdentificationTable();
-    }
-
-    public void check(Programa program) throws IOException {
-        System.out.println("\n>>> 2. ANALISE DE CONTEXTO <<<");
+    public void check(Programa program) throws IOException {        
         program.visit(this);
-
         System.out.println("  > Análise de Contexto concluída;");
     }
 
@@ -394,6 +389,10 @@ public class Checker implements Visitor {
         if (variable.selector != null) {
             variable.selector.visit(this);
         }
+    }
+    
+    public void ImpimeIdentificationTable() {
+        table.print();
     }
 
 }

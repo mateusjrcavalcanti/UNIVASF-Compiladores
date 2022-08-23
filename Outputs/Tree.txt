@@ -1,0 +1,288 @@
+
+Programa
+|    Corpo
+|    |    Declaracoes
+|    |    |    Declaracao de Variavel
+|    |    |    |    Lista de IDs
+|    |    |    |    |    valores
+|    |    |    |    Tipo Agregado
+|    |    |    |    |    0
+|    |    |    |    |    2
+|    |    |    |    |    Tipo Simples
+|    |    |    |    |    |    boolean
+|    |    |    Declaracao de Variavel
+|    |    |    |    Lista de IDs
+|    |    |    |    |    x
+|    |    |    |    Tipo Simples
+|    |    |    |    |    real
+|    |    |    Declaracao de Variavel
+|    |    |    |    Lista de IDs
+|    |    |    |    |    y
+|    |    |    |    Tipo Simples
+|    |    |    |    |    integer
+|    |    Comando Composto
+|    |    |    Lista de Comandos
+|    |    |    |    Atribuicao
+|    |    |    |    |    Variavel
+|    |    |    |    |    |    valores
+|    |    |    |    |    |    Seletor
+|    |    |    |    |    |    |    Expressao
+|    |    |    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    |    |    0
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Boolean Literal
+|    |    |    |    |    |    |    |    |    true
+|    |    |    |    Atribuicao
+|    |    |    |    |    Variavel
+|    |    |    |    |    |    valores
+|    |    |    |    |    |    Seletor
+|    |    |    |    |    |    |    Expressao
+|    |    |    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    |    |    1
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Boolean Literal
+|    |    |    |    |    |    |    |    |    false
+|    |    |    |    Atribuicao
+|    |    |    |    |    Variavel
+|    |    |    |    |    |    valores
+|    |    |    |    |    |    Seletor
+|    |    |    |    |    |    |    Expressao
+|    |    |    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    |    |    2
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Boolean Literal
+|    |    |    |    |    |    |    |    |    true
+|    |    |    |    Atribuicao
+|    |    |    |    |    Variavel
+|    |    |    |    |    |    x
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    1
+|    |    |    |    |    |    |    |    /
+|    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    2
+|    |    |    |    Atribuicao
+|    |    |    |    |    Variavel
+|    |    |    |    |    |    y
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    2
+|    |    |    |    |    |    |    |    *
+|    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    2
+|    |    |    |    Iterativo
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    y
+|    |    |    |    |    |    <
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    10
+|    |    |    |    |    Atribuicao
+|    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    y
+|    |    |    |    |    |    Expressao
+|    |    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    |    y
+|    |    |    |    |    |    |    |    +
+|    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    |    x
+|    |    |    |    Condicional
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    y
+|    |    |    |    |    |    >
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    0
+|    |    |    |    |    Comando Composto
+|    |    |    |    |    |    Lista de Comandos
+|    |    |    |    |    |    |    Atribuicao
+|    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    x
+|    |    |    |    |    |    |    |    Expressao
+|    |    |    |    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    |    |    |    0
+|    |    |    |    |    Atribuicao
+|    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    x
+|    |    |    |    |    |    Expressao
+|    |    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    |    x
+|    |    |    |    |    |    |    |    +
+|    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    |    x
+
+Programa
+|    Corpo
+|    |    Declaracoes
+|    |    |    Declaracao de Variavel
+|    |    |    |    Lista de IDs
+|    |    |    |    |    valores
+|    |    |    |    Tipo Agregado
+|    |    |    |    |    0
+|    |    |    |    |    2
+|    |    |    |    |    Tipo Simples
+|    |    |    |    |    |    boolean
+|    |    |    Declaracao de Variavel
+|    |    |    |    Lista de IDs
+|    |    |    |    |    x
+|    |    |    |    Tipo Simples
+|    |    |    |    |    real
+|    |    |    Declaracao de Variavel
+|    |    |    |    Lista de IDs
+|    |    |    |    |    y
+|    |    |    |    Tipo Simples
+|    |    |    |    |    integer
+|    |    Comando Composto
+|    |    |    Lista de Comandos
+|    |    |    |    Atribuicao
+|    |    |    |    |    Variavel
+|    |    |    |    |    |    valores
+|    |    |    |    |    |    Seletor
+|    |    |    |    |    |    |    Expressao
+|    |    |    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    |    |    0
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Boolean Literal
+|    |    |    |    |    |    |    |    |    true
+|    |    |    |    Atribuicao
+|    |    |    |    |    Variavel
+|    |    |    |    |    |    valores
+|    |    |    |    |    |    Seletor
+|    |    |    |    |    |    |    Expressao
+|    |    |    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    |    |    1
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Boolean Literal
+|    |    |    |    |    |    |    |    |    false
+|    |    |    |    Atribuicao
+|    |    |    |    |    Variavel
+|    |    |    |    |    |    valores
+|    |    |    |    |    |    Seletor
+|    |    |    |    |    |    |    Expressao
+|    |    |    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    |    |    2
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Boolean Literal
+|    |    |    |    |    |    |    |    |    true
+|    |    |    |    Atribuicao
+|    |    |    |    |    Variavel
+|    |    |    |    |    |    x
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    1
+|    |    |    |    |    |    |    |    /
+|    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    2
+|    |    |    |    Atribuicao
+|    |    |    |    |    Variavel
+|    |    |    |    |    |    y
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    2
+|    |    |    |    |    |    |    |    *
+|    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    2
+|    |    |    |    Iterativo
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    y
+|    |    |    |    |    |    <
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    10
+|    |    |    |    |    Atribuicao
+|    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    y
+|    |    |    |    |    |    Expressao
+|    |    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    |    y
+|    |    |    |    |    |    |    |    +
+|    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    |    x
+|    |    |    |    Condicional
+|    |    |    |    |    Expressao
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    y
+|    |    |    |    |    |    >
+|    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    0
+|    |    |    |    |    Comando Composto
+|    |    |    |    |    |    Lista de Comandos
+|    |    |    |    |    |    |    Atribuicao
+|    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    x
+|    |    |    |    |    |    |    |    Expressao
+|    |    |    |    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    |    |    Literal
+|    |    |    |    |    |    |    |    |    |    |    |    0
+|    |    |    |    |    Atribuicao
+|    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    x
+|    |    |    |    |    |    Expressao
+|    |    |    |    |    |    |    Expressao Simples
+|    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    |    x
+|    |    |    |    |    |    |    |    +
+|    |    |    |    |    |    |    |    Termo
+|    |    |    |    |    |    |    |    |    Variavel
+|    |    |    |    |    |    |    |    |    |    x

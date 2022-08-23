@@ -11,7 +11,7 @@ public class IdentificationTable {
     public int erroV = 0;
     HashMap table;
 
-    IdentificationTable() {
+    public void IdentificationTable() {
         table = new HashMap();
     }
 
