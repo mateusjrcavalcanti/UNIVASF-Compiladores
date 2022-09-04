@@ -11,7 +11,7 @@ begin
     x := 1 / 2;
     y := 2 * 2;
 
-    while y < 10 do y := y + x;
+    while y < 10 do y := 1 + 10;
 
     if y > 0 then
         begin
