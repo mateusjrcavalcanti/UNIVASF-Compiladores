@@ -84,5 +84,14 @@ public class MainClass {
             Logger.getLogger(ex.getClass().getName()).log(Level.SEVERE, null, ex);
         }
 
+        //Salva o Código;
+        try {
+            fileCode = new FileWriter(new File("out/Code.txt"));
+            fileCode.write(coder.encode(program));
+            fileCode.close();
+        } catch (IOException ex) {
+            Logger.getLogger(ex.getClass().getName()).log(Level.SEVERE, null, ex);
+        }
+
     }
 }
