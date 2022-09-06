@@ -1,6 +1,5 @@
 package errors;
 
-import exceptions.SyntacticException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -15,51 +14,28 @@ public class SyntacticErrors {
     }
 
     public void error(int type, String msg) {
-        totalErrors++;
+        this.totalErrors++;
         switch (type) {
             case 1:
-                Logger.getLogger(this.name).log(
-                        Level.SEVERE, null,
-                        "[" + totalErrors + "] ERRO SINTÁTICO 1.1 - Token inesperado."
-                );
-                Logger.getLogger(this.name).log(Level.SEVERE, null, msg);
+                Logger.getLogger(this.name).log(Level.SEVERE, "[{0}] ERRO SINT\u00c1TICO 1.1 - Token inesperado.", this.totalErrors);                
                 break;
             case 2:
-                Logger.getLogger(this.name).log(
-                        Level.SEVERE, null,
-                        "[" + totalErrors + "] ERRO SINTÁTICO 1.2 - Booleano invalido. (Atribuição Lógica deve conter 'true' ou 'false')"
-                );
-                Logger.getLogger(this.name).log(Level.SEVERE, null, msg);
+                Logger.getLogger(this.name).log(Level.SEVERE, "[{0}] ERRO SINT\u00c1TICO 1.2 - Booleano invalido. (Atribui\u00e7\u00e3o L\u00f3gica deve conter ''true'' ou ''false'')", this.totalErrors);                
                 break;
             case 3:
-                Logger.getLogger(this.name).log(
-                        Level.SEVERE, null,
-                        "[" + totalErrors + "] ERRO SINTÁTICO 1.3 - Comando invalido. (Comando deve ser do tipo ATRIBUIÇAO (IDENTIFIER), CONDICIONAL (IF), ITERATIVO (WHILE) ou COMANDO COMPOSTO (BEGIN)"
-                );
-                Logger.getLogger(this.name).log(Level.SEVERE, null, msg);
+                Logger.getLogger(this.name).log(Level.SEVERE, "[{0}] ERRO SINT\u00c1TICO 1.3 - Comando invalido. (Comando deve ser do tipo ATRIBUI\u00c7AO (IDENTIFIER), CONDICIONAL (IF), ITERATIVO (WHILE) ou COMANDO COMPOSTO (BEGIN)", this.totalErrors);                
                 break;
             case 4:
-                Logger.getLogger(this.name).log(
-                        Level.SEVERE, null,
-                        "[" + totalErrors + "] ERRO SINTÁTICO 1.4 - Fator invalido. (Fator espera receber ATRIBUIÇAO (IDENTIFIER), LITERAL ou EXPRESSAO ENTRE PARENTESES)"
-                );
-                Logger.getLogger(this.name).log(Level.SEVERE, null, msg);
+                Logger.getLogger(this.name).log(Level.SEVERE, "[{0}] ERRO SINT\u00c1TICO 1.4 - Fator invalido. (Fator espera receber ATRIBUI\u00c7AO (IDENTIFIER), LITERAL ou EXPRESSAO ENTRE PARENTESES)", this.totalErrors);                
                 break;
             case 5:
-                Logger.getLogger(this.name).log(
-                        Level.SEVERE, null,
-                        "[" + totalErrors + "] ERRO SINTÁTICO 1.5 - Literal invalido. (Literal deve ser do tipo BOOLEANO ('true' ou 'false'), INTEIRO ou FLOAT)"
-                );
-                Logger.getLogger(this.name).log(Level.SEVERE, null, msg);
+                Logger.getLogger(this.name).log(Level.SEVERE, "[{0}] ERRO SINT\u00c1TICO 1.5 - Literal invalido. (Literal deve ser do tipo BOOLEANO (''true'' ou ''false''), INTEIRO ou FLOAT)", this.totalErrors);                
                 break;
             case 6:
-                Logger.getLogger(this.name).log(
-                        Level.SEVERE, null,
-                        "[" + totalErrors + "] ERRO SINTÁTICO 1.6 - Tipo invalido. (Tipo deve ser TIPO AGREGADO (array) ou TIPO SIMPLES (inteiro, real ou booleano))"
-                );
-                Logger.getLogger(this.name).log(Level.SEVERE, null, msg);
+                Logger.getLogger(this.name).log(Level.SEVERE, "[{0}] ERRO SINT\u00c1TICO 1.6 - Tipo invalido. (Tipo deve ser TIPO AGREGADO (array) ou TIPO SIMPLES (inteiro, real ou booleano))", this.totalErrors);                
                 break;
         }
+        Logger.getLogger(this.name).log(Level.SEVERE, msg);
     }
 
     public int getNumberErrors() {
@@ -67,11 +43,9 @@ public class SyntacticErrors {
     }
 
     public void status() {
-        if (totalErrors > 0) {
-            throw new SyntacticException("Compilação interrompida durante a ANÁLISE SINTATICA. ("
-                    + totalErrors
-                    + " erros encontrados)"
-            );
+        if (this.totalErrors > 0) {          
+            Logger.getLogger(this.name).log(Level.INFO, "Compila\u00e7\u00e3o interrompida durante a AN\u00c1LISE SINTATICA. ({0} erros encontrados)", this.totalErrors);
+            System.exit(0);
         } else {
             Logger.getLogger(this.name).log(
                     Level.INFO,

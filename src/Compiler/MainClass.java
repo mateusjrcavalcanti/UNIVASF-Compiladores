@@ -13,6 +13,8 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import lexicon.Scanner;
+import lexicon.Token;
 
 public class MainClass {
 
@@ -34,6 +36,21 @@ public class MainClass {
             programDir = "program.pas";
         }
 
+        // ETAPA 01
+        try {
+            Scanner scanner = new Scanner(programDir);
+            System.out.println("TOKENS:");
+            for (Token item : scanner.ler()) {
+                System.out.println(item.toString());
+            }
+        } catch (LexiconException ex) {
+            Logger.getLogger(ex.getClass().getName()).log(Level.SEVERE, null, "Lexicon Error " + ex.getMessage());
+        } catch (Exception ex) {
+            System.out.println("Generic Error!!");
+            System.out.println(ex.getClass().getName());
+            System.exit(0);
+        }
+        
         //PARSE para PROGRAM;
         try {
             program = parser.parse(programDir);
@@ -63,15 +80,6 @@ public class MainClass {
             fileTable = new FileWriter(new File("out/Table.txt"));
             fileTable.write(checker.getTable().print());
             fileTable.close();
-        } catch (IOException ex) {
-            Logger.getLogger(ex.getClass().getName()).log(Level.SEVERE, null, ex);
-        }
-
-        //Salva o Código;
-        try {
-            fileCode = new FileWriter(new File("out/Code.txt"));
-            fileCode.write(coder.encode(program));
-            fileCode.close();
         } catch (IOException ex) {
             Logger.getLogger(ex.getClass().getName()).log(Level.SEVERE, null, ex);
         }

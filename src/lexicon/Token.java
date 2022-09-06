@@ -26,7 +26,7 @@ public class Token {
 
     @Override
     public String toString() {
-        return value + " " + type + " " + line + " " + col;
+        return "[" + Spellings[type].toUpperCase() + "] => " + value + " LINHA: " + line + " COLUNA: " + col;
     }
 
     public final static byte IDENTIFIER = 0, 

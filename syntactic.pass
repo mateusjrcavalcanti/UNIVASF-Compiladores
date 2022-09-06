@@ -1,0 +1,4 @@
+program programa;
+var teste := integer;  
+begin teste :=  2 + 3;  
+end

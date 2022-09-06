@@ -1,9 +1,13 @@
 package lexicon;
 
-import exceptions.SyntacticException;
+import exceptions.LexiconException;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
+import java.io.IOException;
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Scanner {
 
@@ -14,7 +18,7 @@ public class Scanner {
     private byte currentKind;
     private StringBuffer currentValue;
 
-    public Scanner(String fileName) throws Exception {
+    public Scanner(String fileName) throws FileNotFoundException, IOException {
         BufferedReader file = new BufferedReader(new FileReader(fileName));
         this.file = file;
         currentChar = (char) file.read();
@@ -22,35 +26,38 @@ public class Scanner {
         line = 1;
     }
 
-    public Token scan() throws Exception {
+    public Token scan() throws IOException {
         currentValue = new StringBuffer("");
         while (currentChar == '#' || currentChar == ' ' || currentChar == '\n' || currentChar == 13 || currentChar == '\t' || currentChar == 10) {
             scanSeparator();
         }
         currentValue.delete(0, currentValue.length());
         currentKind = scanToken();
+        
+        Token token = new Token(currentKind, currentValue.toString(), line, aux);
 
         if (currentKind == Token.ERROR) {
-            throw new SyntacticException(currentKind + " valor: " + currentValue.toString() + "linha: " + line + ", coluna: " + aux);
-        } else {
-            return new Token(currentKind, currentValue.toString(), line, aux);
+            Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, token.toString());
+            System.exit(0);
         }
+        
+        return token;
     }
 
-    private void take(char expectedChar) throws Exception {
+    private void take(char expectedChar) throws IOException {
         if (currentChar == expectedChar) {
             currentValue.append(currentChar);
             currentChar = (char) file.read();
         }
     }
 
-    private void takeIt() throws Exception {
+    private void takeIt() throws IOException {
         currentValue.append(currentChar);
         currentChar = (char) file.read();
         col++;
     }
 
-    private byte scanToken() throws Exception {
+    private byte scanToken() throws IOException {
 
         if (isLetter(currentChar)) {
             takeIt();
@@ -215,7 +222,7 @@ public class Scanner {
         return Token.ERROR;
     }
 
-    private void scanSeparator() throws Exception {
+    private void scanSeparator() throws IOException {
         switch (currentChar) {
 
             case '#': {
@@ -240,7 +247,7 @@ public class Scanner {
         }
     }
 
-    public ArrayList<Token> ler() throws Exception {
+    public ArrayList<Token> ler() throws IOException {
         ArrayList<Token> lista = new ArrayList<>();
         Token tk;
         do {

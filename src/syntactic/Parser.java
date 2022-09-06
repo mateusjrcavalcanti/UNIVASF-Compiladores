@@ -25,6 +25,8 @@ import abstractSyntaxTree.Type;
 import abstractSyntaxTree.TypeAggregate;
 import abstractSyntaxTree.TypeSimple;
 import errors.SyntacticErrors;
+import exceptions.SyntacticException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -36,7 +38,7 @@ public class Parser {
 
     private SyntacticErrors Errors;
 
-    public Parser() {
+    public Parser() throws SyntacticException{
         this.Errors = new SyntacticErrors(this.getClass());
     }
 
@@ -49,8 +51,8 @@ public class Parser {
         Logger.getLogger(this.getClass().getName()).log(
                 Level.INFO,
                 "1. A análise sintática foi iniciada"
-        );
-
+        );        
+        
         program = parsePrograma();
 
         this.Errors.status();
@@ -64,8 +66,8 @@ public class Parser {
         } else {
             Errors.error(
                     1,
-                    "Esperava encontrar:" + Token.Spellings[expectedKind]
-                    + "na linha: " + lastToken.line
+                    "Esperava encontrar: " + Token.Spellings[expectedKind]
+                    + " na linha: " + lastToken.line
                     + ", coluna: " + lastToken.col
             );
         }
